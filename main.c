@@ -5,11 +5,39 @@
 #include <unistd.h>
 #include <getopt.h>
 
-#define DEBUG 100
+#define DEBUG 100                                                      
 
+
+void banner()
+{
+	printf("                                                                   -----        \n");
+	printf("*****  ****   *****  *** *     *   *  *****     *****  *****  ****   *****  ***** \n");
+	printf("*   *  *   *  *       *  *     *   *  *   *     *      *   *  *   *  *   *  *   * \n");
+	printf("*   *  *   *  *       *  *     *   *  *   *     *      *   *  *   *  *   *  *   * \n");
+	printf("*****  *   *  *****   *  *     *   *  *****     ****   *   *  *   *  *****  *   * \n");
+	printf("*      *   *      *   *  *     *   *  *   *     *      *   *  *   *  *   *  *   * \n");
+	printf("*      *   *      *   *  *     *   *  *   *     *      *   *  *   *  *   *  *   * \n");
+	printf("*      ****   *****  *** *****  ***   *   *     *      *****  ****   *   *  ***** \n");
+	printf("\n\n");
+	printf("                          *****      *  *****              \n");
+	printf("                          *         *   *        *     *   \n");
+	printf("                          *        *    *        *     *   \n");
+	printf("                          *        *    *      ***** ***** \n");
+	printf("                          *        *    *        *     *   \n");
+	printf("                          *       *     *        *     *   \n");
+	printf("                          *****  *      *****              \n");
+	printf("\n\n");
+}
+
+void _usage(uint8_t * arg)
+{
+	printf("\n\n\n\n\n\n\n\n\n\n");
+	banner();
+    printf("Usage: %s <options> \n",arg);
+}
 void usage(uint8_t * arg)
 {
-    printf("Usage: %s <options> \n",arg);
+	_usage(arg);
     printf("Options: \n");
     printf("-e = Encrypt data\n");    
     printf("-d = Decrypt data\n");    
@@ -43,8 +71,8 @@ void help(uint8_t *opt)
         printf("it is possible to generate a key from 3 components and\n");
         printf("generate its KCV.\n");          
     }else{
-        printf("Usage: %s <command> <options>\n",opt);
-        printf("Example\n");
+        _usage(opt);
+        printf("Example:\n");
         printf("\t encrypt \t%s -e --key <key value> --data <data value>\n",opt);
         printf("\t decrypt \t%s -d --key <key value> --data <data value>\n",opt);
         printf("\t key kcv \t%s -K --key <key value> \n",opt);
