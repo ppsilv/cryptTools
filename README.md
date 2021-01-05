@@ -1,4 +1,4 @@
-# The TRIPLE-DES Algorithm Illustrated for C code
+# The TRIPLE-DES for C code
 
 
 The 3des code code was grab from someone that I cannot remember, if somebary knows
