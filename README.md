@@ -1,7 +1,7 @@
 # The TRIPLE-DES for C code
 
 
-The 3des code code was grab from someone that I cannot remember, if somebary knows
+The 3des code code was grab from someone that I cannot remember, if somebody knows
 who is the guy please let me know to give his credit.
 
 Version %s %s %s\n",version,comp_data,comp_hour
